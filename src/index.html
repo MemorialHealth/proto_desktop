@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>MHSystem</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Auth0 Lock script -->
+    <!--<script src="https://cdn.auth0.com/js/lock/10.5/lock.min.js"></script>-->
+
+    <!-- Setting the right viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  </head>
+  <body>
+    <!--<img alt="avatar" id="avatar" style="display:none;">
+<p>Welcome <span id="nickname"></span></p>
+<button type="submit" id="btn-login">Sign In</button>-->
+
+    <nav>
+      <div class="nav-side">
+        <ul class="side-list list-unstyled">
+          <li class="primary">
+            <a href="#"><i class="material-icons" style="color:white;">home</i></a>
+          </li>
+          <li><i class="material-icons" style="color:white;">bubble_chart</i></li>
+          <li><i class="material-icons" style="color:white;">equalizer</i></li>
+          <li id="word" title="Launch Word"><i class="material-icons" style="color:white;">folder_shared</i></li>
+          <li id="moneyz"><i class="material-icons" style="color:white;">monetization_on</i></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content-wrapper">
+
+    
+
+      <div class="container-fluid">
+          <div class='tableauPlaceholder' id='viz1477587617125' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;Testing_172&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Testing_172&#47;Dashboard1' />
+          <param name='showShareOptions' value='no' /><param name='showVizHome' value='no' /><param name=':toolbar' value='no' />
+          <param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;Testing_172&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='no' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1477587617125');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1024px';vizElement.style.minHeight='329px';vizElement.style.maxHeight='429px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+          
+
+          </script>
+      </div>
+    </div>
+
+    
+
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using node <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    //require('./renderer.js')
+
+    var path = require('path');
+    var child = require('child_process').exec;
+    var opts = [
+      {
+        title: 'Basic Notification',
+        body: 'Some short message =)'
+      }
+    ];
+    document.addEventListener('DOMContentLoaded', function(){
+      document.getElementById('moneyz').addEventListener('click', function(){
+        new Notification(opts[0].title, opts[0]);
+      });
+
+      document.getElementById('word').addEventListener('click', function(){
+        child('start winword', function(err, stdout){
+          if(err)
+            alert(err);
+        });
+      });
+    });
+    
+  </script>
+</html>

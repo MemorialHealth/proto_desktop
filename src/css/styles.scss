@@ -1,0 +1,83 @@
+$blue-bright: rgb(0, 176, 240);
+$grey-darker:rgb(38,38,38);
+$grey-dark: rgb(46,46,46);
+$grey-mid: rgb(64,64,64);
+$grey-light: rgb(89,89,89);
+
+$success: rgb(78, 179, 103);
+$warning: rgb(230, 191, 77);
+$danger: rgb(224, 83, 83);
+$purple: #795aac;
+
+$text-grey: rgb(166,166,166);
+
+// Store how wide our left sidebar is
+$menu-width: 60px;
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src:  url(fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+html, body {
+    background: $grey-dark;
+}
+
+.nav-side
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width: $menu-width;
+    height:100%;
+    background: $grey-darker;
+
+    .side-list
+    {
+        li.primary
+        {
+            background:$blue-bright;
+            color:#fff;
+            -webkit-app-region: drag;
+        }
+        text-align: center;
+        li
+        {
+            padding: 10px 0;
+        }
+    }
+}
+
+.content-wrapper
+{
+    margin-left: $menu-width;
+}
+
+.tableau { background: transparent !important; }

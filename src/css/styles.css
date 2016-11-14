@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/MaterialIcons-Regular.ttf) format("truetype"); }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+html, body {
+  background: #2e2e2e; }
+
+.nav-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background: #262626; }
+  .nav-side .side-list {
+    text-align: center; }
+    .nav-side .side-list li.primary {
+      background: #00b0f0;
+      color: #fff;
+      -webkit-app-region: drag; }
+    .nav-side .side-list li {
+      padding: 10px 0; }
+
+.content-wrapper {
+  margin-left: 60px; }
+
+.tableau {
+  background: transparent !important; }

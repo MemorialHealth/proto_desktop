@@ -1,0 +1,35 @@
+{
+  "name": "proto_desktop",
+  "productName": "MHS Portal",
+  "version": "1.0.0",
+  "description": "Desktop POC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-packager . dsportal --platform=win32 --arch=x64 --no-prune --icon=src/trayIcon.ico",
+    "buildosx": "electron-packager . dsportal --platform=darwin --arch=x64 --no-prune --icon=src/trayIcon.ico",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MemorialHealth/proto_desktop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MemorialHealth/proto_desktop/issues"
+  },
+  "homepage": "https://github.com/MemorialHealth/proto_desktop#readme",
+  "devDependencies": {
+    "debug-menu": "^0.4.0",
+    "electron": "^1.4.1",
+    "electron-packager": "^8.1.0",
+    "electron-prebuilt": "^1.4.3",
+    "node-sass": "^3.10.1",
+    "rimraf": "^2.5.4"
+  },
+  "dependencies": {
+    "activedirectory": "^0.7.2"
+  }
+}
